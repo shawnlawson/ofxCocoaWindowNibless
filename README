@@ -12,13 +12,13 @@ ADDING TO A PROJECT
 1 Add ofxCocoaWindowNibless to addons folder
 2 Add CoreVideo.framework
 3 Rename any file with Objective-C headers or code will need to be renamed to be Objective-C++ compatible.
-<pre>
+
 .cpp to .mm
-</pre>
+
 4 Window handle must be passed to testApp if we want to unlink update rate from draw frame rate
-<pre>
+
 ofRunApp( new testApp(&cocoaWindow) );
-</pre
+
 
 
 FUTURE
