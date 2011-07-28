@@ -1,0 +1,36 @@
+ofxCocoaWindowNibless
+
+DESCRIPTION
+-----------
+
+Inspired from Memo's original ofxCocoaWindow. I didn't want to use Nib files, wanted to be as close to using the GLUT windowing as possible, and needed something that was compatible with OF 007 and GLEW. 
+
+
+ADDING TO A PROJECT
+------------------
+
+1 Add ofxCocoaWindowNibless to addons folder
+2 Add CoreVideo.framework
+3 Rename any file with Objective-C headers or code will need to be renamed to be Objective-C++ compatible.
+<pre>
+.cpp to .mm
+</pre>
+4 Window handle must be passed to testApp if we want to unlink update rate from draw frame rate
+<pre>
+ofRunApp( new testApp(&cocoaWindow) );
+</pre
+
+
+FUTURE
+------
+
+Multi-window with shared GL Context resources. 
+Scrollwheel.
+Handle OF_FULLSCREEN on launch.
+Better handling of window titles.
+Drag and Drop.
+
+KNOWN PROBLEMS
+--------------
+
+ofSetWindowPosition() when called from setup() seems to have no effect. Possibly other window related things in setup() will not work. 
